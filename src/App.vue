@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <foorLoop></foorLoop>
+  <log-in></log-in>
+
   </div>
 </template>
 
 <script>
 
-import foorLoop from './components/foorLoop.vue';
+
+import LogIn from './components/LogIn.vue';
 export default {
   name: 'App',
   components: {
-    foorLoop
+    LogIn
   }
 }
 </script>
