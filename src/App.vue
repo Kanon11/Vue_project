@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-  <log-in></log-in>
-
+  <!-- <log-in :kanon="xy"></log-in> -->
+  <modal-view></modal-view>
   </div>
 </template>
 
 <script>
 
 
-import LogIn from './components/LogIn.vue';
+// import LogIn from './components/LogIn.vue';
+import modalView from './components/modalView.vue';
 export default {
   name: 'App',
   components: {
-    LogIn
+    // LogIn,
+    modalView
+  },
+  data(){
+    return{
+      xy:20,
+    }
   }
 }
 </script>

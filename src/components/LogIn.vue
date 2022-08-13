@@ -1,25 +1,27 @@
 <template>
   <div>
     <h1>Login</h1>
-    <p v-bind:class="{ paragraph: isActive == 1 }">{{ message }}</p>
+    <p v-bind:class="{ 'paragraph': isActive == 1 }">{{ message }}</p>
     <br />
-
     <input type="text" v-model="message" /><br /><br />
-    <p v-bind:class="{ paragraph: isActive == 1 }">{{ count }}</p>
+
+    <p v-bind:class="{ 'paragraph': isActive == 1 }">{{ count }}</p>
     <br />
     <button v-on:click="count++">+</button><br />
     <button @click="count--">-</button>
+    <br>
+    {{kanon}}
   </div>
 </template>
 
 <script>
 export default {
   name: "LogIn",
-  watch:{
-    count(){
-        alert("value changed")
-    }
-  },
+  // watch:{
+  //   count(){
+  //       alert("value changed")
+  //   }
+  // },
   data:()=> {
     return {
       name: "kanon",
@@ -28,6 +30,7 @@ export default {
       count: 0,
     };
   },
+  props:["kanon"],
   beforeCreate() {
     console.log("bofore|Created", this.name);
   },
